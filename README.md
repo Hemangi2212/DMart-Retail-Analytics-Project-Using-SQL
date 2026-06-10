@@ -1,148 +1,232 @@
-# DMart-Retail-Analytics-Project-Using-SQL
-Transforming 50,000+ retail transactions into actionable business intelligence using SQL, ETL, Data Warehousing, and Window Functions.
+# 🛒 DMart Retail Analytics Project Using SQL
 
-📌 Project Overview
+Transforming **50,000+ retail transactions** into actionable business intelligence using **SQL, ETL, Data Warehousing, and Window Functions**.
 
-Retail companies generate thousands of transactions every day. Raw transactional data is difficult to analyze directly.
+---
 
-This project demonstrates how a retail company like DMart can:
+## 📌 Project Overview
 
-Store transactions in an OLTP system
-Build a Star Schema Data Warehouse (ROLAP)
-Perform ETL processing
-Generate analytical reports
-Extract business insights using advanced SQL
+Retail companies generate thousands of transactions every day, making raw data difficult to analyze directly.
 
-Dataset Size:
+This project demonstrates how a retail company like **DMart** can:
 
-📊 50,000+ Sales Records
-👥 Customer Data
-🏬 Store Data
-📦 Product Data
-🚚 Supplier Data
+* Store transactions in an **OLTP database**
+* Build a **Star Schema Data Warehouse (ROLAP)**
+* Perform **ETL (Extract, Transform, Load)** processing
+* Generate analytical reports
+* Extract business insights using advanced SQL techniques
 
-🏗 Architecture
-~~~
-          OLTP DATABASE
-      (Transactional System)
-                 │
-                 ▼
-          ETL PROCESS
-    (Extract Transform Load)
-                 │
-                 ▼
-       ROLAP DATA WAREHOUSE
-          (Star Schema)
-                 │
-                 ▼
-        ANALYTICAL REPORTS
-~~~
+### 📊 Dataset Size
 
-⭐ Star Schema Design
-Fact Table
-~~~
-fact_sales 
-~~~
+* 50,000+ Sales Records
+* Customer Data
+* Store Data
+* Product Data
+* Supplier Data
 
-Contains:
+---
 
-Sales Amount
-Profit
-Quantity
-Cost
-Discounts
+## 🏗️ Architecture
 
-Dimension Tables
-~~~
+```text
+OLTP DATABASE
+(Transactional System)
+        │
+        ▼
+ETL PROCESS
+(Extract, Transform, Load)
+        │
+        ▼
+ROLAP DATA WAREHOUSE
+(Star Schema)
+        │
+        ▼
+ANALYTICAL REPORTS
+```
+
+---
+
+## ⭐ Star Schema Design
+
+### Fact Table
+
+```sql
+fact_sales
+```
+
+**Measures Included:**
+
+* Sale Amount
+* Profit
+* Quantity
+* Cost
+* Discounts
+
+### Dimension Tables
+
+```sql
 dim_customer
 dim_store
 dim_product
 dim_supplier
 dim_date
-~~~
+```
 
-📈 Business Analytics Queries
-1️⃣ Top Revenue Generating Stores
-Objective
+---
+
+# 📈 Business Analytics Queries
+
+## 1️⃣ Top Revenue Generating Stores
+
+### 🎯 Objective
 
 Identify the highest-performing stores across the country.
 
-SQL Features Used
-SUM()
-JOIN
-RANK() Window Function
-Business Insight
+### 🛠 SQL Features Used
 
-✅ RetailMart Aligarh generated the highest revenue.
+* SUM()
+* JOIN
+* RANK() Window Function
 
-✅ Top stores contribute significantly to overall company sales.
+### 💡 Business Insight
 
-✅ Management can study these stores and replicate successful strategies elsewhere.
+* Top-performing stores contribute significantly to overall company revenue.
+* High-performing stores can be used as benchmarks for other branches.
+* Management can replicate successful strategies across lower-performing stores.
 
-2️⃣ Month-over-Month Sales Growth
-Objective
+---
+
+## 2️⃣ Month-over-Month Sales Growth
+
+### 🎯 Objective
 
 Analyze sales performance over time.
 
-SQL Features Used
-GROUP BY
-LAG() Window Function
-Business Insight
+### 🛠 SQL Features Used
 
-✅ Detect seasonal demand patterns.
+* GROUP BY
+* LAG() Window Function
 
-✅ Measure monthly growth and decline.
+### 💡 Business Insight
 
-✅ Improve inventory and marketing planning.
+* Identifies seasonal sales patterns.
+* Measures monthly growth and decline in revenue.
+* Supports inventory planning and forecasting.
 
-3️⃣ High-Value Customer Analysis
-Objective
+---
 
-Find customers generating maximum revenue.
+## 3️⃣ High-Value Customer Analysis
 
-SQL Features Used
-DENSE_RANK()
-Aggregation
-Business Insight
+### 🎯 Objective
 
-✅ Identify VIP customers.
+Identify customers generating the highest revenue.
 
-✅ Design loyalty and retention programs.
+### 🛠 SQL Features Used
 
-✅ Increase customer lifetime value.
+* DENSE_RANK()
+* Aggregation Functions
 
-4️⃣ Running Revenue Trend
-Objective
+### 💡 Business Insight
 
-Track cumulative business growth.
+* Helps identify VIP customers.
+* Supports loyalty and retention programs.
+* Improves customer lifetime value strategies.
 
-SQL Features Used
-SUM() OVER()
-Business Insight
+---
 
-✅ Monitor overall business trajectory.
+## 4️⃣ Running Revenue Trend
 
-✅ Measure progress against revenue targets.
+### 🎯 Objective
 
-✅ Support executive decision-making.
+Track cumulative business growth over time.
 
-5️⃣ Most Profitable Products
-Objective
+### 🛠 SQL Features Used
 
-Discover products driving maximum profit.
+* SUM() OVER()
 
-SQL Features Used
-ROW_NUMBER()
-Aggregation
-Business Insight
+### 💡 Business Insight
 
-✅ Focus inventory investment on profitable products.
+* Monitors overall business growth.
+* Helps measure progress against revenue targets.
+* Supports strategic decision-making.
 
-✅ Optimize product portfolio.
+---
 
-✅ Improve profit margins.
+## 5️⃣ Most Profitable Products
 
+### 🎯 Objective
 
-Conclusion
+Discover products generating the highest profit.
 
-This project demonstrates practical knowledge of SQL, Data Warehousing, ETL, and Business Analytics by converting raw retail transaction data into actionable insights for decision-making.
+### 🛠 SQL Features Used
+
+* ROW_NUMBER()
+* Aggregation Functions
+
+### 💡 Business Insight
+
+* Highlights products driving profitability.
+* Supports inventory optimization.
+* Helps improve profit margins and product strategy.
+
+---
+
+## 🔥 Window Functions Implemented
+
+| Window Function | Business Use Case           |
+| --------------- | --------------------------- |
+| RANK()          | Store Revenue Ranking       |
+| DENSE_RANK()    | Customer Ranking            |
+| ROW_NUMBER()    | Product Ranking             |
+| LAG()           | Month-over-Month Analysis   |
+| SUM() OVER()    | Running Revenue Calculation |
+
+---
+
+## 🛠 Skills Demonstrated
+
+### SQL
+
+* Joins
+* Aggregations
+* Common Table Expressions (CTEs)
+* Window Functions
+
+### Data Warehousing
+
+* Star Schema Design
+* Fact & Dimension Modeling
+* OLTP vs ROLAP Architecture
+
+### ETL
+
+* Data Extraction
+* Data Transformation
+* Data Loading
+
+### Business Analytics
+
+* Revenue Analysis
+* Customer Segmentation
+* Product Performance Analysis
+* Sales Trend Analysis
+
+---
+
+## 🎯 Key Outcomes
+
+✅ Built a Retail Data Warehouse using Star Schema
+
+✅ Performed ETL from OLTP to ROLAP
+
+✅ Processed and analyzed 50,000+ sales transactions
+
+✅ Implemented advanced SQL Window Functions
+
+✅ Generated actionable business insights for decision-making
+
+---
+
+## 📌 Conclusion
+
+This project demonstrates practical knowledge of **SQL, Data Warehousing, ETL, and Business Analytics** by transforming raw retail transaction data into meaningful business insights. The analytical reports help businesses understand customer behavior, store performance, sales trends, and product profitability to support data-driven decision-making.
