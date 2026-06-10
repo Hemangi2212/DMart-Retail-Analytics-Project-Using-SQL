@@ -1,6 +1,6 @@
 # DMart-Retail-Analytics-Project-Using-SQL
 Transforming 50,000+ retail transactions into actionable business intelligence using SQL, ETL, Data Warehousing, and Window Functions.
-````
+
 📌 Project Overview
 
 Retail companies generate thousands of transactions every day. Raw transactional data is difficult to analyze directly.
@@ -21,4 +21,19 @@ Dataset Size:
 📦 Product Data
 🚚 Supplier Data
 
+🏗 Architecture
+~~~
+          OLTP DATABASE
+      (Transactional System)
+                 │
+                 ▼
+          ETL PROCESS
+    (Extract Transform Load)
+                 │
+                 ▼
+       ROLAP DATA WAREHOUSE
+          (Star Schema)
+                 │
+                 ▼
+        ANALYTICAL REPORTS
 ~~~
